@@ -1,0 +1,64 @@
+
+$primaryColor: #4286f4;
+
+body {
+  $primaryColor: #ccc;
+  background: $primaryColor;
+}
+
+
+.TopPodcast_Box{
+	z-index: 4;
+	margin-left:50px;
+	display: flex;
+	background-color:#F0EFFF;//#EEE0FF;
+	flex-wrap: wrap;
+	padding-left: 50px;
+	overflow-wrap: break-word;
+	justify-content: space-around;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	 .Button_Box{
+	 	margin-right:30px;
+	 	width: 200px;
+	 	display: flex;
+	 	border-radius: 15px;
+	 	background-color:#F9F9F9;
+	 	border-width: thin;
+	 	border-style: none;
+		.TopPodcast_Indi_Box{
+			background-color: #F9F9F9;
+			width: 200px;
+			height: 70px;
+			word-wrap: break-all;
+			padding: 5px;
+	    	overflow-wrap: break-word;
+	    	overflow: hidden;
+	    	border-radius: 15px;
+	    	display: flex;
+	    	border-style: none;
+	    	.Image_Box{
+				width:70px;
+				height:70px;
+				margin-left: -5px;
+				.Podcast_Image{
+		    		height: 70px;
+		    		border-radius: 15px;
+
+		    	}
+			}
+		}
+		.TopPodcast_Main{
+			margin-top: -40px;
+  			color: black;
+  			padding: 10px;
+  		}
+
+	}
+}
+
+p {
+  color: $primaryColor;
+  font: bold;
+
+}

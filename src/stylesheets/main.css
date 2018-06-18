@@ -1,0 +1,326 @@
+body {
+  background: #ccc; }
+
+.TopPodcast_Box {
+  z-index: 4;
+  margin-left: 50px;
+  display: flex;
+  background-color: #F0EFFF;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  overflow-wrap: break-word;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .TopPodcast_Box .Button_Box {
+    margin-right: 30px;
+    width: 200px;
+    display: flex;
+    border-radius: 15px;
+    background-color: #F9F9F9;
+    border-width: thin;
+    border-style: none; }
+    .TopPodcast_Box .Button_Box .TopPodcast_Indi_Box {
+      background-color: #F9F9F9;
+      width: 200px;
+      height: 70px;
+      word-wrap: break-all;
+      padding: 5px;
+      overflow-wrap: break-word;
+      overflow: hidden;
+      border-radius: 15px;
+      display: flex;
+      border-style: none; }
+      .TopPodcast_Box .Button_Box .TopPodcast_Indi_Box .Image_Box {
+        width: 70px;
+        height: 70px;
+        margin-left: -5px; }
+        .TopPodcast_Box .Button_Box .TopPodcast_Indi_Box .Image_Box .Podcast_Image {
+          height: 70px;
+          border-radius: 15px; }
+    .TopPodcast_Box .Button_Box .TopPodcast_Main {
+      margin-top: -40px;
+      color: black;
+      padding: 10px; }
+
+p {
+  color: #4286f4;
+  font: bold; }
+
+body {
+  background: #ccc; }
+
+.genreBox:hover {
+  position: absolute;
+  z-index: 3;
+  top: 150px;
+  left: 60px;
+  border-style: solid;
+  border-width: 0.2px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: #BBB6FF; }
+  .genreBox:hover .title {
+    color: black;
+    margin: 5px;
+    margin-left: 10px;
+    font-size: 20px; }
+  .genreBox:hover .listBox {
+    list-style-type: none;
+    line-height: 180%;
+    margin-left: -30px; }
+    .genreBox:hover .listBox li {
+      margin: 5px; }
+      .genreBox:hover .listBox li button {
+        background-color: #BBB6FF;
+        border-style: none; }
+      .genreBox:hover .listBox li button:hover {
+        font-weight: bold;
+        font-size: 15px; }
+
+.genreBox {
+  position: absolute;
+  z-index: 3;
+  top: 150px;
+  left: 130px;
+  border-style: solid;
+  border-width: 0.2px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: #BBB6FF; }
+  .genreBox .asideA {
+    color: black;
+    margin: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    z-index: 2;
+    position: absolute;
+    top: 18px;
+    left: -70px;
+    border-style: solid;
+    border-width: 0.2px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #BBB6FF;
+    text-align: center;
+    height: 30px;
+    border-bottom-style: none;
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+  .genreBox .title {
+    color: black;
+    margin: 5px;
+    margin-left: 10px;
+    font-size: 20px; }
+  .genreBox .listBox {
+    list-style-type: none;
+    line-height: 180%;
+    margin-left: -30px; }
+    .genreBox .listBox li {
+      margin: 5px; }
+      .genreBox .listBox li button {
+        background-color: #BBB6FF;
+        border-style: none; }
+      .genreBox .listBox li button:hover {
+        font-weight: bold;
+        font-size: 15px; }
+
+.subscribed:hover {
+  position: absolute;
+  z-index: 3;
+  top: 500px;
+  left: 60px;
+  border-style: solid;
+  border-width: 0.2px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: #D7D4FF; }
+  .subscribed:hover .title {
+    color: black;
+    margin: 5px;
+    margin-left: 10px;
+    font-size: 20px; }
+  .subscribed:hover .listBox {
+    list-style-type: none;
+    line-height: 180%;
+    margin-left: -30px; }
+    .subscribed:hover .listBox li {
+      margin: 5px; }
+      .subscribed:hover .listBox li button {
+        background-color: #D7D4FF;
+        border-style: none; }
+      .subscribed:hover .listBox li button:hover {
+        font-weight: bold;
+        font-size: 15px; }
+
+.subscribed {
+  position: absolute;
+  z-index: 3;
+  top: 500px;
+  left: 130px;
+  border-style: solid;
+  border-width: 0.2px;
+  width: 100px;
+  border-radius: 15px;
+  background-color: #D7D4FF; }
+  .subscribed .asideB {
+    color: black;
+    margin: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    z-index: 2;
+    position: absolute;
+    border-style: solid;
+    border-width: 0.2px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #D7D4FF;
+    text-align: center;
+    height: 30px;
+    border-bottom-style: none;
+    left: -90px;
+    top: 25px;
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+  .subscribed .title {
+    color: black;
+    margin: 5px;
+    margin-left: 10px;
+    font-size: 20px; }
+  .subscribed .listBox {
+    list-style-type: none;
+    line-height: 180%;
+    margin-left: -20px; }
+    .subscribed .listBox li {
+      margin: 5px; }
+      .subscribed .listBox li button {
+        background-color: #D7D4FF;
+        border-style: none; }
+      .subscribed .listBox li button:hover {
+        font-weight: bold;
+        font-size: 15px; }
+
+.IndiBox {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  border-style: solid;
+  border-width: 0.2px;
+  border-radius: 15px;
+  z-index: 5;
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center; }
+  .IndiBox .Button {
+    position: absolute;
+    top: 10px;
+    left: 470px;
+    border-style: solid;
+    border-width: 0.2px;
+    border-radius: 15px;
+    background-color: white; }
+  .IndiBox .Button:hover {
+    background-color: #BBB6FF; }
+  .IndiBox .Image {
+    position: absolute;
+    top: 60px;
+    left: 30px; }
+  .IndiBox .Text {
+    margin: 20px;
+    margin-top: 250px;
+    font-size: 15px;
+    font-weight: normal; }
+  .IndiBox .Subscribers {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    font-size: 25px; }
+
+.main-layout {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 100px 100px;
+  margin: -10px;
+  background-color: white;
+  /* Class name via Modernizr */ }
+  .main-layout .search {
+    display: flex;
+    justify-content: flex-end; }
+    .main-layout .search .searchBox {
+      padding: 10px;
+      border-radius: 25px; }
+    .main-layout .search input {
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 0.2px;
+      padding: 4px; }
+    .main-layout .search button {
+      border-radius: 10px;
+      height: 25px;
+      border-style: none;
+      background-color: white; }
+    .main-layout .search select {
+      width: 100px;
+      border-radius: 10px;
+      background-color: white;
+      border-color: black; }
+  .main-layout .main-container {
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+    width: 100%; }
+  .main-layout .main-two-column {
+    display: flex; }
+    .main-layout .main-two-column .main-column {
+      flex: 1 0 0;
+      padding: 0 100px; }
+      .main-layout .main-two-column .main-column > * {
+        margin-bottom: 100px; }
+  .main-layout .main-header {
+    padding-bottom: 100px; }
+  .main-layout .main-body {
+    flex: 1;
+    padding-bottom: 100px; }
+  .main-layout .main-footer {
+    width: 100%;
+    background-color: #C0C0C0; }
+  .main-layout .moderationform-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .main-layout .grey-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.2); }
+
+/*# sourceMappingURL=main.css.map */

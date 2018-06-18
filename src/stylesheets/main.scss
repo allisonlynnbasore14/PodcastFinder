@@ -1,0 +1,98 @@
+
+@import "components/toppodcast";
+@import "components/homepodcasts";
+@import "components/genrebox";
+@import "components/subscribed";
+@import "components/indibox";
+
+.main-layout {
+	font-family:"Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+  	height: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	box-sizing: border-box;
+  	padding: 100px 100px;
+  	margin: -10px;
+    //position: fixed;
+    background-color: white;
+	/* Class name via Modernizr */
+
+    .search{
+    	display: flex;
+    	justify-content: flex-end;
+ 		.searchBox{
+ 			padding: 10px;
+ 			border-radius: 25px;
+ 		}
+ 		input{
+ 			border-radius: 10px;
+ 			border-style: solid;
+ 			border-width: 0.2px;
+ 			padding: 4px;
+ 		}
+ 		button{
+ 			border-radius: 10px;
+ 			height:25px;
+ 			border-style: none;
+ 			background-color: white;
+
+ 		}
+ 		select{
+ 			width:100px;
+ 			border-radius:10px;
+ 			background-color: white;
+ 			border-color: black;
+ 		}
+
+ 	}
+    //border-style: outset;
+  .main-container {
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+  }
+  .main-two-column {
+    display: flex;
+    .main-column {
+      flex: 1 0 0;
+      padding: 0 100px;
+      & > * {
+        margin-bottom: 100px;
+      }
+    }
+  }
+  .main-header {
+    padding-bottom: 100px;
+  }
+  .main-body {
+    flex: 1;
+    padding-bottom: 100px;
+  }
+  .main-footer {
+    width: 100%;
+    background-color: #C0C0C0;
+  }
+  .moderationform-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .grey-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,.2);
+  }
+
+
+}
