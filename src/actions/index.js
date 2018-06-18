@@ -86,6 +86,7 @@ const fetchPodcasts = (query,searchType) => dispatch => {
   }else{
     return fetch(`https://www.gpodder.net/api/2/tag/${query.toLowerCase()}/50.json`)
       .then(response => response.json())
+      .then(json => dispatch(receivePodcasts(query, searchType, json)))
   }
 }
 
