@@ -6,6 +6,8 @@
 @import "components/indibox";
 
 .main-layout {
+  -moz-transform: scale(1.3); /* for Firefox, default 1*/
+  zoom:130%; /* For Chrome, IE, default 100%*/
 	font-family:"Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 	font-size: 10px;
 	font-style: normal;
