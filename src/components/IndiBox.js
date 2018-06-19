@@ -26,7 +26,7 @@ const IndiBox = ({podcast, onClick1, onClick2}) => (
 		<div className="Subscribers">
 			Subscribers: {podcast.subscribers}
 			<div className="ListenLink">
-				<a href={podcast.url}>Listen Now!</a>
+				<a href={podcast.website}>Listen Now!</a>
 				
 			</div>
 			<button className="SubscribeButton" onClick={e => onClick2(podcast)} value={podcast} type="button">
