@@ -5,13 +5,25 @@ import {
   REQUEST_PODCASTS, RECEIVE_PODCASTS,
   SELECT_SEARCH_TYPE, SELECT_INDI,
   RECEIVE_INDI, CHANGE_INDI_SHOW,
-  REQUEST_INDI, TOGGLE_INDI
+  REQUEST_INDI, TOGGLE_INDI,
+  SUBSCRIBE, ADDINITALSUBSCRIBED
 } from '../actions'
 
 const selectedQuery = (state = null, action) => {
   switch (action.type) {
     case SELECT_QUERY:
       return action.query
+    default:
+      return state
+  }
+}
+
+const subscribed = (state=[],action)=>{
+  switch (action.type){
+    case SUBSCRIBE:
+      return [...action.subscribed, action.subscribedPod]
+    case ADDINITALSUBSCRIBED:
+      return action.initalSubscribed
     default:
       return state
   }
@@ -182,7 +194,8 @@ const rootReducer = combineReducers({
   podcastsByQuery,
   selectedQuery,
   searchType,
-  indiPod
+  indiPod,
+  subscribed
 })
 
 export default rootReducer

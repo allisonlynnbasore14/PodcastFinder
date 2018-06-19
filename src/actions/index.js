@@ -1,4 +1,5 @@
 
+
 export const REQUEST_PODCASTS = 'REQUEST_PODCASTS'
 export const RECEIVE_PODCASTS = 'RECEIVE_PODCASTS'
 export const SELECT_QUERY = 'SELECT_QUERY'
@@ -9,6 +10,8 @@ export const RECEIVE_INDI = 'RECEIVE_INDI'
 export const CHANGE_INDI_SHOW = 'CHANGE_INDI_SHOW'
 export const REQUEST_INDI = 'REQUEST_INDI'
 export const TOGGLE_INDI = 'TOGGLE_INDI'
+export const SUBSCRIBE = 'SUBSCRIBE'
+export const ADDINITALSUBSCRIBED = 'ADDINITALSUBSCRIBED'
 
 export const selectQuery = query => ({
   type: SELECT_QUERY,
@@ -18,6 +21,12 @@ export const selectQuery = query => ({
 export const indiPod = indiPod => ({
   type: SELECT_INDI,
   indiPod
+})
+
+export const subscribe = (subscribedPod, subscribed) =>({
+  type: SUBSCRIBE,
+  subscribedPod,
+  subscribed
 })
 
 
@@ -69,6 +78,11 @@ export const receiveIndiPodcast = (indiPod) => ({
   indiPod
 })
 
+export const addInitalSubscribed = (initalSubscribed) =>({
+  type: ADDINITALSUBSCRIBED,
+  initalSubscribed
+})
+
 
 export const selectIndiPodcast = (podcast) => dispatch =>{
   dispatch(requestIndi(podcast))
@@ -88,6 +102,12 @@ const fetchPodcasts = (query,searchType) => dispatch => {
       .then(response => response.json())
       .then(json => dispatch(receivePodcasts(query, searchType, json)))
   }
+}
+
+export const loadSubscribed = () => dispatch =>{
+  return fetch(`https://www.gpodder.net/subscriptions/abasore/cloudcaster_abasore.json`)
+    .then(response => response.json())
+    .then(json => dispatch(addInitalSubscribed(json)))
 }
 
 const shouldFetchPosts = (state, query) => {

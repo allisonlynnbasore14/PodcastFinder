@@ -10,7 +10,7 @@ const Subscribed = ({vals, onClick}) => (
 	</div>
 	 <ul className='listBox'>
 	    {vals.map((val, i) =>
-	    	<li key={i}>{<button className="Button" onClick={e => onClick(e.target.value)} value={val} type="button">{val}</button>}</li>
+	    	<li key={i}>{<button className="Button" onClick={e => onClick(val)} type="button">{ val.title}</button>}</li>
 	    	
 	    )}
 	</ul>
@@ -19,7 +19,7 @@ const Subscribed = ({vals, onClick}) => (
 
 Subscribed.propTypes = {
   options: PropTypes.array.isRequired,
-  onChance: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired
 }
 
 export default Subscribed

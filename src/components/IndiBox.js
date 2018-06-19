@@ -4,12 +4,13 @@ import PropTypes from 'prop-types'
 import ReactImageFallback from "react-image-fallback";
 
 
-const IndiBox = ({podcast, onClick}) => (
+const IndiBox = ({podcast, onClick1, onClick2}) => (
 	<div className='IndiBox'>
 		{podcast.title}
-		<button className="Button" onClick={e => onClick(e.target.value)} value={"finally"} type="button">
+		<button className="Button" onClick={e => onClick1(e.target.value)} value={"finally"} type="button">
 			<i class="fa fa-times" aria-hidden="true"></i>
 		</button>
+
 		<div className="Image">
             <ReactImageFallback
                 src={podcast.logo_url}
@@ -24,12 +25,21 @@ const IndiBox = ({podcast, onClick}) => (
 		</div>
 		<div className="Subscribers">
 			Subscribers: {podcast.subscribers}
+			<div className="ListenLink">
+				<a href={podcast.url}>Listen Now!</a>
+				
+			</div>
+			<button className="SubscribeButton" onClick={e => onClick2(podcast)} value={podcast} type="button">
+				Subscribe
+			</button>
 		</div>
   	</div>
+
 )
 
 IndiBox.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick1: PropTypes.func.isRequired,
+  onClick2: PropTypes.func.isRequired
 }
 
 export default IndiBox

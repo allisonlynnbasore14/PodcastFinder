@@ -2,7 +2,7 @@ import { Form, Text, TextArea, Radio, RadioGroup, Select, Checkbox } from 'react
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { selectQuery, fetchPodcastsIfNeeded, invalidateQuery, makeQuery, changeSearchType, changeIndiShow, selectIndiPodcast, indiPod, toggleIndi} from '../actions'
+import { selectQuery, fetchPodcastsIfNeeded, invalidateQuery, makeQuery, changeSearchType, loadSubscribed, changeIndiShow, subscribe, selectIndiPodcast, indiPod, toggleIndi} from '../actions'
 import Picker from '../components/Picker'
 import Podcasts from '../components/Podcasts'
 import TopPodcast from '../components/TopPodcast'
@@ -22,12 +22,14 @@ class App extends Component {
     searchType: PropTypes.string.isRequired,
     showIndi: PropTypes.bool.isRequired,
     indiPod: PropTypes.object.isRequired,
+    subscribed: PropTypes.array.isRequired
   }
 
   componentDidMount() {
 
     const { dispatch, selectedQuery, searchType,indiPod,showIndi } = this.props
     dispatch(fetchPodcastsIfNeeded(selectedQuery, searchType))
+    dispatch(loadSubscribed())
   }
 
 
@@ -50,6 +52,11 @@ class App extends Component {
   openPodcast = podToOpen=>{
     this.props.dispatch(indiPod(podToOpen)) 
     this.props.dispatch(selectIndiPodcast(podToOpen))
+  }
+
+  subscribe = podcast=>{
+    this.props.dispatch(subscribe(podcast, this.props.subscribed))
+    
   }
 
   toggleIndi = podToClose=>{
@@ -84,12 +91,14 @@ class App extends Component {
   }
 
   render() {
-    const { selectedQuery, podcasts, isFetching, lastUpdated, searchType, showIndi, indiPod} = this.props
+    const { selectedQuery, podcasts, isFetching, lastUpdated, searchType, showIndi, indiPod, subscribed} = this.props
     const isEmpty = podcasts.length === 0
+    console.log("ppppppppppppppp");
+    console.log(this.props)
     return (
       <div>
           {this.props.indiPod &&
-            <IndiBox podcast={indiPod} onClick={this.toggleIndi}/>
+            <IndiBox podcast={indiPod} onClick1={this.toggleIndi} onClick2={this.subscribe}/>
           }
         <div className = "main-layout">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> 
@@ -111,7 +120,7 @@ class App extends Component {
             <GenreBox value={selectedQuery} onClick={this.handleGenre} options={[ 'History', 'Business','Comedy','News','Technology','Education','Health','Games','Film','Politics','Sport','Science', 'Arts','Religion']}/>
           </div>
           <div className="subscribed">
-            <Subscribed value={selectedQuery} onClick={this.handleGenre} vals={[ 'Podcast 1','Podcast 2','Podcast 3','Podcast 4']}/>
+            <Subscribed value={selectedQuery} onClick={this.openPodcast} vals={subscribed}/>
           </div>
           <div className="TopPodcast_Box" >
                 {podcasts.map((podcast, i) =>
@@ -129,7 +138,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  const { selectedQuery, podcastsByQuery , searchType, indiPod} = state
+  const { selectedQuery, podcastsByQuery , searchType, indiPod, subscribed} = state
   const {
     isFetching,
     showIndi,
@@ -148,7 +157,8 @@ const mapStateToProps = state => {
     lastUpdated,
     searchType,
     showIndi,
-    indiPod
+    indiPod,
+    subscribed
   }
 }
 
