@@ -38,6 +38,10 @@ body {
         .TopPodcast_Box .Button_Box .TopPodcast_Indi_Box .Image_Box .Podcast_Image {
           height: 70px;
           border-radius: 15px; }
+    .TopPodcast_Box .Button_Box .TopPodcast_Indi_Box:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      boarder-color: black;
+      boarder-width: 12px; }
     .TopPodcast_Box .Button_Box .TopPodcast_Main {
       margin-top: -40px;
       color: black;
@@ -302,17 +306,17 @@ body {
     background-color: white;
     /* Class name via Modernizr */ }
     .Cover .main-layout .Title {
-      font-size: 20px;
+      font-size: 15px;
       font-weight: bold;
       position: absolute;
-      top: 35px;
+      top: 55px;
       left: 200px;
       border-style: solid;
       border-width: 0.2px;
       border-radius: 15px;
-      max-width: 300px;
-      padding: 35px;
-      height: 100px;
+      max-width: 250px;
+      padding: 25px;
+      height: 60px;
       z-index: 2;
       background-color: #938DE8; }
     .Cover .main-layout .search {
