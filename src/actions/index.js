@@ -93,12 +93,12 @@ export const selectIndiPodcast = (podcast) => dispatch =>{
 
 const fetchPodcasts = (query,searchType) => dispatch => {
   dispatch(requestPodcasts(query,searchType))
-  if(query===null){
-    return fetch(`https://www.gpodder.net/toplist/50.json`)
+  if(query===null || query==='Top 50'){
+    return fetch(`https://www.gpodder.net/toplist/40.json`)
       .then(response => response.json())
       .then(json => dispatch(receivePodcasts(query, searchType, json)))
   }else{
-    return fetch(`https://www.gpodder.net/api/2/tag/${query.toLowerCase()}/50.json`)
+    return fetch(`https://www.gpodder.net/api/2/tag/${query.toLowerCase()}/40.json`)
       .then(response => response.json())
       .then(json => dispatch(receivePodcasts(query, searchType, json)))
   }

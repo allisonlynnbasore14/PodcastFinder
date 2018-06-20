@@ -93,14 +93,24 @@ class App extends Component {
   render() {
     const { selectedQuery, podcasts, isFetching, lastUpdated, searchType, showIndi, indiPod, subscribed} = this.props
     const isEmpty = podcasts.length === 0
-    console.log("ppppppppppppppp");
-    console.log(this.props)
     return (
+      <div className="Cover">
       <div>
           {this.props.indiPod &&
             <IndiBox podcast={indiPod} onClick1={this.toggleIndi} onClick2={this.subscribe}/>
           }
         <div className = "main-layout">
+          {this.props.selectedQuery &&
+            <div className="Title">
+              {this.props.selectedQuery}
+            </div>
+          }
+          {!this.props.selectedQuery &&
+            <div className="Title">
+              Welcome to Podcast Finder
+            </div>
+          }
+
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> 
           </link>
           <div className="search">
@@ -117,7 +127,7 @@ class App extends Component {
                 options={[ 'title', 'popularity' , 'recommended']} className= "pickerBox" />
           </div>
           <div className="genreBox">
-            <GenreBox value={selectedQuery} onClick={this.handleGenre} options={[ 'History', 'Business','Comedy','News','Technology','Education','Health','Games','Film','Politics','Sport','Science', 'Arts','Religion']}/>
+            <GenreBox value={selectedQuery} onClick={this.handleGenre} options={[ 'Top 50', 'History', 'Business','Comedy','News','Technology','Education','Health','Games','Film','Politics','Sport','Science', 'Arts','Religion']}/>
           </div>
           <div className="subscribed">
             <Subscribed value={selectedQuery} onClick={this.openPodcast} vals={subscribed}/>
@@ -132,7 +142,7 @@ class App extends Component {
           </div>
         </div>
       </div>
-
+      </div>
     )
   }
 }

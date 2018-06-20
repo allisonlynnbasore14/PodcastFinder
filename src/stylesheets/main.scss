@@ -5,52 +5,72 @@
 @import "components/subscribed";
 @import "components/indibox";
 
+.Cover{
+    -moz-transform: scale(1.5); /* for Firefox, default 1*/
+    zoom:150%; /* For Chrome, IE, default 100%*/
+    background-color: white;
+    top: 40px;
+    left: 210px;
+    height: 100%;
 .main-layout {
-  -moz-transform: scale(1.5); /* for Firefox, default 1*/
-  zoom:150%; /* For Chrome, IE, default 100%*/
-	font-family:"Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-	font-size: 10px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-  	height: 100%;
-  	display: flex;
-  	flex-direction: column;
-  	box-sizing: border-box;
-  	padding: 100px 100px;
-  	margin: -10px;
+  .Title{
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 35px;
+    left: 200px;
+    border-style: solid;
+    border-width: 0.2px;
+    border-radius: 15px;
+    max-width: 500px;
+    padding: 35px;
+    height: 100px;
+    z-index: 2;
+    background-color: #938DE8;
+  }
+  font-family:"Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 100px 100px;
+    margin: -10px;
     //position: fixed;
     background-color: white;
-	/* Class name via Modernizr */
+  /* Class name via Modernizr */
 
     .search{
-    	display: flex;
-    	justify-content: flex-end;
- 		.searchBox{
- 			padding: 10px;
- 			border-radius: 25px;
- 		}
- 		input{
- 			border-radius: 10px;
- 			border-style: solid;
- 			border-width: 0.2px;
- 			padding: 4px;
- 		}
- 		button{
- 			border-radius: 10px;
- 			height:25px;
- 			border-style: none;
- 			background-color: white;
+      display: flex;
+      justify-content: flex-end;
+    .searchBox{
+      padding: 10px;
+      border-radius: 25px;
+    }
+    input{
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 0.2px;
+      padding: 4px;
+    }
+    button{
+      border-radius: 10px;
+      height:25px;
+      border-style: none;
+      background-color: white;
 
- 		}
- 		select{
- 			width:100px;
- 			border-radius:10px;
- 			background-color: white;
- 			border-color: black;
- 		}
+    }
+    select{
+      width:100px;
+      border-radius:10px;
+      background-color: white;
+      border-color: black;
+    }
 
- 	}
+  }
     //border-style: outset;
   .main-container {
     box-sizing: border-box;
@@ -97,4 +117,5 @@
   }
 
 
+}
 }

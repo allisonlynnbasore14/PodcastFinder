@@ -53,7 +53,7 @@ body {
 .genreBox:hover {
   position: absolute;
   z-index: 3;
-  top: 150px;
+  top: 160px;
   left: 60px;
   border-style: solid;
   border-width: 0.2px;
@@ -135,7 +135,7 @@ body {
 .subscribed:hover {
   position: absolute;
   z-index: 3;
-  top: 500px;
+  top: 550px;
   left: 60px;
   border-style: solid;
   border-width: 0.2px;
@@ -278,74 +278,97 @@ body {
     .IndiBox .Subscribers .SubscribeButton:hover {
       background-color: #BBB6FF; }
 
-.main-layout {
-  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 10px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 100px 100px;
-  margin: -10px;
+.Cover {
+  -moz-transform: scale(1.5);
+  /* for Firefox, default 1*/
+  zoom: 150%;
+  /* For Chrome, IE, default 100%*/
   background-color: white;
-  /* Class name via Modernizr */ }
-  .main-layout .search {
+  top: 40px;
+  left: 210px;
+  height: 100%; }
+  .Cover .main-layout {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    height: 100%;
     display: flex;
-    justify-content: flex-end; }
-    .main-layout .search .searchBox {
-      padding: 10px;
-      border-radius: 25px; }
-    .main-layout .search input {
-      border-radius: 10px;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 100px 100px;
+    margin: -10px;
+    background-color: white;
+    /* Class name via Modernizr */ }
+    .Cover .main-layout .Title {
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top: 35px;
+      left: 200px;
       border-style: solid;
       border-width: 0.2px;
-      padding: 4px; }
-    .main-layout .search button {
-      border-radius: 10px;
-      height: 25px;
-      border-style: none;
-      background-color: white; }
-    .main-layout .search select {
-      width: 100px;
-      border-radius: 10px;
-      background-color: white;
-      border-color: black; }
-  .main-layout .main-container {
-    box-sizing: border-box;
-    max-width: 1000px;
-    margin: auto;
-    width: 100%; }
-  .main-layout .main-two-column {
-    display: flex; }
-    .main-layout .main-two-column .main-column {
-      flex: 1 0 0;
-      padding: 0 100px; }
-      .main-layout .main-two-column .main-column > * {
-        margin-bottom: 100px; }
-  .main-layout .main-header {
-    padding-bottom: 100px; }
-  .main-layout .main-body {
-    flex: 1;
-    padding-bottom: 100px; }
-  .main-layout .main-footer {
-    width: 100%;
-    background-color: #C0C0C0; }
-  .main-layout .moderationform-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-  .main-layout .grey-out {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: rgba(0, 0, 0, 0.2); }
+      border-radius: 15px;
+      max-width: 500px;
+      padding: 35px;
+      height: 100px;
+      z-index: 2;
+      background-color: #938DE8; }
+    .Cover .main-layout .search {
+      display: flex;
+      justify-content: flex-end; }
+      .Cover .main-layout .search .searchBox {
+        padding: 10px;
+        border-radius: 25px; }
+      .Cover .main-layout .search input {
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 0.2px;
+        padding: 4px; }
+      .Cover .main-layout .search button {
+        border-radius: 10px;
+        height: 25px;
+        border-style: none;
+        background-color: white; }
+      .Cover .main-layout .search select {
+        width: 100px;
+        border-radius: 10px;
+        background-color: white;
+        border-color: black; }
+    .Cover .main-layout .main-container {
+      box-sizing: border-box;
+      max-width: 1000px;
+      margin: auto;
+      width: 100%; }
+    .Cover .main-layout .main-two-column {
+      display: flex; }
+      .Cover .main-layout .main-two-column .main-column {
+        flex: 1 0 0;
+        padding: 0 100px; }
+        .Cover .main-layout .main-two-column .main-column > * {
+          margin-bottom: 100px; }
+    .Cover .main-layout .main-header {
+      padding-bottom: 100px; }
+    .Cover .main-layout .main-body {
+      flex: 1;
+      padding-bottom: 100px; }
+    .Cover .main-layout .main-footer {
+      width: 100%;
+      background-color: #C0C0C0; }
+    .Cover .main-layout .moderationform-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .Cover .main-layout .grey-out {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=main.css.map */
